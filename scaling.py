@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def stress_cpu():
     # Create a separate process to run "stress_cpu.py"
-    subprocess.Popen(['python', 'stress_cpu.py'])
+    subprocess.Popen(['python3', 'stress_cpu.py'])
     return "Stressing CPU in a separate process."
 
 # Route for handling HTTP GET request
